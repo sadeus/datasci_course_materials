@@ -1,0 +1,1 @@
+select a.docid, b.docid, sum(a.count * b.count) as similarity from freq as a join freq as b on a.term = b.term where a.docid = 'q' group by a.docid, b.docid order by similarity desc limit 10;

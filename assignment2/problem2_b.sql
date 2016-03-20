@@ -1,0 +1,1 @@
+select a.docid, b.docid, sum(a.count * b.count) from (select * from frequency where docid='10080_txt_crude') as a join (select * from frequency where docid='17035_txt_earn') as b on a.term = b.term group by a.docid, b.docid;

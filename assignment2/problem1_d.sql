@@ -1,0 +1,1 @@
+select distinct count(*) from frequency where term = 'legal' or term = 'law';
